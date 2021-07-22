@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Reservia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/538a48f33d.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,8 +29,7 @@
         <div>
             <span>Filtres</span>
             <ul>
-                <li><i class="fas fa-money-bill-wave"></i>Economique</li>
-                <!--Est-ce qu'on intègre l'icône dans le paragraphe ou la met-on à part?-->
+                <li><i class="fas fa-money-bill-wave"></i>Économique</li>
                 <!--E accent pour économique-->
                 <li><i class="fas fa-child"></i>Familial</li>
                 <li><i class="fas fa-heart"></i>Romantique</li>
@@ -88,13 +91,13 @@
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
             </div>
-            <p>Afficher plus</p>
+            <a href="#">Afficher plus</a>
         </article>
         <aside>
-            <div>
+            <header>
                 <h4>Les plus populaires</h4>
                 <i class="fas fa-chart-line"></i>
-            </div>
+            </header>
             <div>
                 <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de l'hôtel le soleil du matin"/>
                 <div>
@@ -121,12 +124,14 @@
             </div>
         </aside>
     </section>
-    <div><!--Ou article?-->
+    <section><!--Ou article?-->
         <h3>Activités à Marseille</h3>
-        <div>
+        <figure>
             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port de Marseille"/>
-            <h4>Vieux Port</h4>
-        </div>
+            <figcaption>
+                <h4>Vieux Port</h4>
+            </figcaption>
+        </figure>
         <div>
             <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du Fort de Pomègues"/>
             <h4>Fort de Pomègues</h4>
@@ -147,7 +152,7 @@
             <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du parc de Longchamp"/>
             <h4>Parc Longchamp</h4>
         </div>
-    </div>
+    </section>
     <footer>
         <div>
             <h5>A propos</h5>
