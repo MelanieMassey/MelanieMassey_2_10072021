@@ -4,39 +4,38 @@
     <meta charset="UTF-8"/>
     <title>Reservia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/538a48f33d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <img src="images/logo/Reservia.svg" alt="Logo de Reservia"/>
-        <nav>
+        <nav class="MainNav">
             <a href="#">Hébergements</a>
             <a href="#">Activités</a>
-            <a href="#">S'inscrire</a>
+            <a href="#" class="subscribe">S'inscrire</a>
         </nav>
     </header>
-    <div>
+    <div class="Hebergement">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <h2>En plein centre ville ou en pleine nature</h2>
-        <div>
+        <div class="SearchZone">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="search">
+            <input type="search" value="Marseille, France">
             <button>Rechercher</button>
         </div>
-        <div>
+        <div class="Filters">
             <span>Filtres</span>
             <ul>
                 <li><i class="fas fa-money-bill-wave"></i>Économique</li>
-                <!--E accent pour économique-->
                 <li><i class="fas fa-child"></i>Familial</li>
                 <li><i class="fas fa-heart"></i>Romantique</li>
                 <li><i class="fas fa-dog"></i>Animaux autorisés</li>
             </ul>
         </div>
-        <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+        <p class="SearchInfo"><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         <!--Est-ce qu'on intègre l'icône dans le paragraphe ou la met-on à part?-->
     </div>
     <section>
@@ -48,7 +47,6 @@
                     <h4>Auberge la Cannebière</h4>
                     <p>Nuit à partir de 25€</p>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <!--Met-on les icônes les unes à la suite des autres dans le code ou autre façon de mettre en forme dans le code?-->
                 </div>
             </div>
             <div>
@@ -124,7 +122,7 @@
             </div>
         </aside>
     </section>
-    <section><!--Ou article?-->
+    <section>
         <h3>Activités à Marseille</h3>
         <figure>
             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port de Marseille"/>
@@ -157,29 +155,23 @@
         <div>
             <h5>A propos</h5>
             <nav>
-                <ul>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales de vente</a></li>
-                    <li><a href="#">Données et confidentialité</a></li>
-                </ul>
+                <a href="#">Fonctionnement du site</a>
+                <a href="#">Conditions générales de vente</a>
+                <a href="#">Données et confidentialité</a>
             </nav>
         </div>
         <div>
             <h5>Nos hébergements</h5>
             <nav>
-                <ul>
-                    <li><a href="#">Charte qualité</a></li>
-                    <li><a href="#">Soumettre votre hôtel</a></li>
-                </ul>
+                <a href="#">Charte qualité</a>
+                <a href="#">Soumettre votre hôtel</a>
             </nav>
         </div>
         <div>
             <h5>Assistance</h5>
             <nav>
-                <ul>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
             </nav>
         </div>
     </footer>

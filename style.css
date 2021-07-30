@@ -2,8 +2,126 @@
     box-sizing:border-box;
     font-family: 'Raleway', sans-serif;
 }
+
+:root{
+    --black: #000000;
+    --blue: #0065FC;
+    --lightblue: #DEEBFF;
+    --grey: #F2F2F2;
+    --white: #FFFFFF;
+}
+
 body{
-    width:100%;
+    width:100%
     margin:0;
     padding:0;
+    font-size: 0.9rem;
 }
+
+h1{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 0.9rem; 
+    font-weight: inherit;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+/*Header*/
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+}
+
+.subscribe{
+    color: var(--blue); /*/!\ Ne fonctionne pas /!\*/
+    font-weight: bold;
+}
+
+.MainNav{
+    display: flex;
+}
+
+.MainNav a{
+    padding-top: 50px;
+    margin-right: 50px;
+    font-size: 1.2rem;
+    color: var(--black);
+    text-decoration: none;
+    border-top: 3px solid transparent;
+}
+
+.MainNav a:hover{
+    color:#0065FC;
+    border-top: 3px solid #0065FC;
+}
+
+/*Trouvez votre hébergement*/
+.SearchZone{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.SearchZone i{
+    padding: 15px;
+    background-color: var(--grey);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.SearchZone input{
+    border: 1px var(--grey) solid;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.SearchZone button{
+    background-color: var(--blue);
+    padding: 15px;
+    border: 1px var(--blue) solid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.Filters{
+    display: flex; /*Problèmes pour gérer les espacements*/
+    font-weight: bold;
+    
+}
+
+.Filters i{
+    color:var(--blue);
+    padding: 15px;
+    height: 40px;
+    width: 40px;
+    align-items: center; 
+    background-color: var(--lightblue);
+    border-radius: 30px;
+}
+
+ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.SearchInfo i{
+    color:var(--blue);
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    align-items: center; /*/!\ Ne fonctionne pas /!\*/
+    border: 1px var(--grey) solid;
+    border-radius: 50%;
+}
+
+/*Hébergements à Marseille*/
+
+
+
