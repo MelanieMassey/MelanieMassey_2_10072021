@@ -12,10 +12,10 @@
 }
 
 body{
-    width:100%
+    width:100%;
     margin:0;
     padding:0;
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 h1{
@@ -23,7 +23,7 @@ h1{
 }
 
 h2{
-    font-size: 0.9rem; 
+    font-size: 1rem; 
     font-weight: inherit;
 }
 
@@ -35,25 +35,33 @@ h3{
 header{
     display:flex;
     justify-content:space-between;
-    align-items:baseline;
+    align-items: center;
+    height:100px;
 }
 
-.subscribe{
-    color: var(--blue); /*/!\ Ne fonctionne pas /!\*/
+#subscribe{
+    color: var(--blue);
     font-weight: bold;
 }
 
 .MainNav{
     display: flex;
+    justify-content: flex-end;
+}
+.MainNav nav{
+    display: flex;
 }
 
 .MainNav a{
-    padding-top: 50px;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
     color: var(--black);
     text-decoration: none;
     border-top: 3px solid transparent;
+    height: 100px;
+    padding-left: 20px; /*???* Est-ce que padding ok ici pour obtenir trait débordant du texte ?*/
+    padding-right: 20px;
 }
 
 .MainNav a:hover{
@@ -65,10 +73,14 @@ header{
 .SearchZone{
     display: inline-flex;
     justify-content: space-between;
+    height: 40px;
 }
 
 .SearchZone i{
-    padding: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;;
+    width: 40px;
     background-color: var(--grey);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -76,13 +88,15 @@ header{
 
 .SearchZone input{
     border: 1px var(--grey) solid;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: bold;
 }
 
 .SearchZone button{
     background-color: var(--blue);
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: 1px var(--blue) solid;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -91,37 +105,73 @@ header{
 }
 
 .Filters{
-    display: flex; /*Problèmes pour gérer les espacements*/
+    display: flex; 
+    align-items: center;
     font-weight: bold;
-    
+}
+
+.Filters ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .Filters i{
     color:var(--blue);
-    padding: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 40px;
-    align-items: center; 
     background-color: var(--lightblue);
-    border-radius: 30px;
+    border-radius: 100%;
 }
 
-ul{
-    display: inline-flex;
+.Filters i:hover{
+    color: var(--lightblue);
+    background-color: var(--blue);
+}
+
+.Filters li{
+    display: flex;
+    align-items: center;
+    border: 1px var(--grey) solid;
+    border-radius: 35px;
     list-style-type: none;
+    margin-right: 20px;
+}
+
+.FilterNames{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.SearchInfo{
+    display: flex;
+    align-items: center;
 }
 
 .SearchInfo i{
     color:var(--blue);
-    padding: 5px;
-    height: 20px;
-    width: 20px;
-    align-items: center; /*/!\ Ne fonctionne pas /!\*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
     border: 1px var(--grey) solid;
-    border-radius: 50%;
+    border-radius: 100%;
+    margin-right: 5px;
 }
 
 /*Hébergements à Marseille*/
+article{
+    background-color: var(--grey);
+    border-radius: 15px;
+}
 
-
+.HebergementsCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--white);
+}
 
