@@ -12,9 +12,10 @@
 }
 
 body{
-    width:100%;
+    max-width: 1440px;
     margin:0;
-    padding:0;
+    padding:0 50px;
+    
     font-size: 16px;
 }
 
@@ -29,6 +30,11 @@ h2{
 
 h3{
     font-size: 1.3rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 /*Header*/
@@ -60,7 +66,7 @@ header{
     text-decoration: none;
     border-top: 3px solid transparent;
     height: 100px;
-    padding-left: 20px; /*???* Est-ce que padding ok ici pour obtenir trait débordant du texte ?*/
+    padding-left: 20px;  
     padding-right: 20px;
 }
 
@@ -127,7 +133,7 @@ header{
     border-radius: 100%;
 }
 
-.Filters i:hover{
+.Filters li:hover i{
     color: var(--lightblue);
     background-color: var(--blue);
 }
@@ -139,6 +145,7 @@ header{
     border-radius: 35px;
     list-style-type: none;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .FilterNames{
@@ -162,16 +169,157 @@ header{
     border-radius: 100%;
     margin-right: 5px;
 }
+/*Hébergements + Populaires*/
+.HebergementsZone{
+    display:flex;
+    justify-content: space-between;
+
+}
 
 /*Hébergements à Marseille*/
-article{
+.HebergementsMarseilleZone{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto) ;
+    background-color: var(--grey);
+    border-radius: 15px;
+    grid-gap: 10px;
+    padding: 30px;
+    /*grid-auto-rows: 600px;*/
+}
+
+.HebergementsMarseilleZone i{
+    color: var(--blue);
+}
+
+.HebergementsMarseilleTitle{
+    grid-column:1/4;
+}
+
+.HebergementsCards{
+    display: block;
+    background-color: var(--white);
+    border: 3px var(--white) solid;
+    border-radius: 15px;
+    box-shadow: 0 0 16px #0000002d;
+}
+
+.HebergementsCardsImg{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.HebergementsDetails{
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+/*Les plus populaires*/
+.HebergementsPopulairesZone{
+    display: flex;
+    flex-direction: column;
     background-color: var(--grey);
     border-radius: 15px;
 }
 
-.HebergementsCards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.HebergementsPopulairesZone i{
+    color: var(--blue);
+}
+
+.PopulairesCards{
+    display: block;
     background-color: var(--white);
+    border: 3px var(--white) solid;
+    border-radius: 15px;
+    box-shadow: 0 0 16px #0000002d;
+}
+
+.PopulairesCardsImg{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/*Activités à Marseille*/
+.ActivitesZone{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--white);
+    grid-gap: 10px;
+    padding: 30px;
+}
+
+.ActivitesMarseilleTitle{
+    grid-column:1/5;
+    grid-row: 1;
+}
+
+.ActivitesVieuxPort{
+    grid-column: 1;
+    grid-row: 2/3;
+}
+
+.ActivitesFortPomegues{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.ActivitesIlesFrioul{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.ActivitesPNCalanques{
+    grid-column: 3;
+    grid-row: 2/3;
+
+}
+
+.ActivitesNDGarde{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.ActivitesParcLongchamp{
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.ActivitesZone figure{
+    display: block;
+    background-color: var(--white);
+    border: 3px var(--white) solid;
+    border-radius: 15px;
+    box-shadow: 0 0 16px #0000002d;
+}
+
+.ActivitesImg{
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media screen and(max-width:720px){
+    .MainNav{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .HebergementsZone{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .HebergementsMarseilleZone{
+        display: flex;
+        flex-direction: column;
+    }
+    .ActivitesZone{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
