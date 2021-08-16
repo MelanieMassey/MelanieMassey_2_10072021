@@ -171,19 +171,19 @@ header{
 }
 /*Hébergements + Populaires*/
 .HebergementsZone{
-    display:flex;
-    justify-content: space-between;
-
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
 }
 
 /*Hébergements à Marseille*/
 .HebergementsMarseilleZone{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto) ;
+    grid-template-rows: 50px 1fr 1fr;
     background-color: var(--grey);
-    border-radius: 15px;
-    grid-gap: 10px;
+    border-radius: 30px;
+    grid-gap: 30px;
     padding: 30px;
     /*grid-auto-rows: 600px;*/
 }
@@ -199,17 +199,17 @@ header{
 .HebergementsCards{
     display: block;
     background-color: var(--white);
-    border: 3px var(--white) solid;
-    border-radius: 15px;
+    border: 6px var(--white) solid;
+    border-radius: 30px;
     box-shadow: 0 0 16px #0000002d;
 }
 
 .HebergementsCardsImg{
     object-fit: cover;
     width: 100%;
-    height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 125px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .HebergementsDetails{
@@ -219,94 +219,114 @@ header{
 
 /*Les plus populaires*/
 .HebergementsPopulairesZone{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 50px repeat(3, 162px);
+    grid-gap: 30px;
     background-color: var(--grey);
-    border-radius: 15px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.HebergementsPopulairesZone header{
+    display: flex;
+    justify-content: space-between;
 }
 
 .HebergementsPopulairesZone i{
     color: var(--blue);
 }
 
+.HebergementsPopulairesZone header i{
+    color: var(--black)
+}
+
 .PopulairesCards{
-    display: block;
+    display: flex;
     background-color: var(--white);
-    border: 3px var(--white) solid;
-    border-radius: 15px;
+    border: 6px var(--white) solid;
+    border-radius: 30px;
     box-shadow: 0 0 16px #0000002d;
 }
 
 .PopulairesCardsImg{
     object-fit: cover;
-    width: 100%;
-    height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
+
+.PopulairesDetails{
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
 /*Activités à Marseille*/
 .ActivitesZone{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 250px 0px 200px;
     background-color: var(--white);
-    grid-gap: 10px;
+    grid-gap: 20px;
     padding: 30px;
 }
 
 .ActivitesMarseilleTitle{
-    grid-column:1/5;
-    grid-row: 1;
+    grid-column: 1/-1;
 }
 
-.ActivitesVieuxPort{
-    grid-column: 1;
-    grid-row: 2/3;
+.ActivitesZone figure:nth-child(2){
+    grid-row: 2/5;
 }
 
-.ActivitesFortPomegues{
-    grid-column: 2;
-    grid-row: 2;
+.ActivitesZone figure:nth-child(3){
+    grid-row: 2/4;
 }
 
-.ActivitesIlesFrioul{
-    grid-column: 2;
-    grid-row: 3;
+.ActivitesZone figure:nth-child(4){
+    grid-column: 3/4;
+    grid-row: 2/5;
 }
 
-.ActivitesPNCalanques{
-    grid-column: 3;
-    grid-row: 2/3;
-
+.ActivitesZone figure:nth-child(7){
+    grid-column: 4/5;
+    grid-row: 3/5;
 }
 
-.ActivitesNDGarde{
-    grid-column: 4;
-    grid-row: 2;
-}
-
-.ActivitesParcLongchamp{
-    grid-column: 4;
-    grid-row: 3;
-}
-
-.ActivitesZone figure{
-    display: block;
+.ActivitesCard{
+    display: grid;
+    grid-template-rows: auto 70px;
     background-color: var(--white);
     border: 3px var(--white) solid;
     border-radius: 15px;
     box-shadow: 0 0 16px #0000002d;
+    margin: 0;
 }
 
 .ActivitesImg{
     object-fit: cover;
     width: 100%;
+    height: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-@media screen and(max-width:720px){
+/*Footer*/
+footer{
+    display: flex;
+    background-color: var(--grey);
+}
+
+.NavFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+@media screen and (max-width:720px){
     .MainNav{
-        display: flex;
         flex-wrap: wrap-reverse;
     }
     .HebergementsZone{
@@ -322,4 +342,5 @@ header{
         flex-direction: column;
     }
 }
+
 
