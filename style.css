@@ -70,6 +70,7 @@ a{
     font-weight: bold;
     align-items: center;
     height: 100px;
+    border-top: 3px solid transparent;
 }
 
 #subscribe:hover{
@@ -315,20 +316,20 @@ a{
     grid-column: 1/-1;
 }
 
-.ActivitesZone figure:nth-child(2){
+.ActivitesZone a:nth-child(2){
     grid-row: 2/5;
 }
 
-.ActivitesZone figure:nth-child(3){
+.ActivitesZone a:nth-child(3){
     grid-row: 2/4;
 }
 
-.ActivitesZone figure:nth-child(4){
+.ActivitesZone a:nth-child(4){
     grid-column: 3/4;
     grid-row: 2/5;
 }
 
-.ActivitesZone figure:nth-child(7){
+.ActivitesZone a:nth-child(7){
     grid-column: 4/5;
     grid-row: 3/5;
 }
@@ -384,7 +385,8 @@ footer h5{
     text-decoration: underline;
 }
 
-/*Medias queries*/
+/***Medias queries***/
+/*Media querie pour tablette paysage*/
 @media screen and (max-width:1024px){
     .MainNav{
         margin-left: 450px;
@@ -407,7 +409,7 @@ footer h5{
         grid-gap: 25px;
     }
     .HebergementsPopulairesZone header{
-    grid-column:1/4
+        grid-column:1/4
     }
     .PopulairesCards{
         display: block;
@@ -433,7 +435,7 @@ footer h5{
         margin: 5px 0 5px 0;
     }
 }
-
+/*Media querie pour tablette portrait*/
 @media screen and (max-width:768px){
     .MainNav{
         margin-left: 200px;
@@ -453,12 +455,18 @@ footer h5{
     .Filters li{
         margin: 5px;
     }
+    .HebergementsMarseilleZone{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .HebergementsMarseilleTitle{
+        grid-column:1/3;
+    }
     .ActivitesCard h4{
         font-size: 0.8em;
         padding-left: 10px;
     }
 }
-
+/*Media querie pour smartphones*/
 @media screen and (max-width:450px){
     body{
         padding:0;
@@ -483,6 +491,7 @@ footer h5{
         padding-right:15px;
         order: 2;
         height: initial;
+        border-top: none;
     }
     #subscribe:hover{
         border-top: none;
