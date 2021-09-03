@@ -467,7 +467,7 @@ footer h5{
     }
 }
 /*Media querie pour smartphones*/
-@media screen and (max-width:450px){
+@media screen and (max-width:430px){
     body{
         padding:0;
     }
@@ -585,7 +585,6 @@ footer h5{
     .PopulairesDetails i{
         margin-top: 5px;
     }
-
     .ActivitesZone{
         display: flex;
         flex-direction: column;
@@ -593,6 +592,11 @@ footer h5{
     }
     .ActivitesImg{
         height: 150px;
+    }
+    .ActivitesCard h4{
+        font-size: initial;
+        padding-left: 20px;
+        margin-top: 10px;
     }
 
     footer{
