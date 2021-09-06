@@ -345,7 +345,7 @@ a{
 }
 
 .ActivitesCard h4{
-    margin: 15px 0 15px 0;
+    margin: 15px 0 15px 15px;
 }
 
 .ActivitesImg{
@@ -432,7 +432,7 @@ footer h5{
         grid-gap: 25px;
     }
     .ActivitesCard h4{
-        margin: 5px 0 5px 0;
+        margin: 5px 0 5px 5px;
     }
 }
 /*Media querie pour tablette portrait*/
